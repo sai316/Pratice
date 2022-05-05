@@ -1,0 +1,14 @@
+GIT COMMENDS
+===========
+
+git init 
+git remote origin master "url"
+git status
+git add *
+git commit -m "msg"
+
+git push
+
+if access are decline 
+
+git remote set-url origin url

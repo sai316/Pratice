@@ -1,9 +1,11 @@
 package com.sampleCurdOperation.SampleCurdOperation.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,10 @@ public class ItemController {
 	public List<Item> getAll(){
 		return repo.findAll();
 		
+	}
+	@GetMapping("/get/{id}")
+	public Optional<Item> getbyid(@PathVariable String id) {
+		return repo.findById(id);
 	}
 
 }
